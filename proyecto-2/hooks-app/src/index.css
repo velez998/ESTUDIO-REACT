@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.fondo-gradient {
+  background: linear-gradient(to right, #020d52, #09011c);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.texto-princ {
+  color: aliceblue;
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Contenedor principal */
+.semaforo-pagina {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0f172a, #111827, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Contenedor de las luces y botones */
+.semaforo-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Tamaño y forma de las luces */
+.w-32 {
+  width: 8rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.rounded-full {
+  border-radius: 50%;
+}
+
+/* Colores de las luces */
+.bg-red-500 {
+  background-color: #ef4444;
+}
+
+.bg-yellow-500 {
+  background-color: #eab308;
+}
+
+.bg-green-500 {
+  background-color: #22c55e;
+}
+
+.bg-gray-500 {
+  background-color: #6b7280;
+}
+
+/* Animación de la luz encendida */
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.boton {
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.boton-rojo {
+  background-color: #ef4444;
+}
+
+.boton-amarillo {
+  background-color: #eab308;
+}
+
+.boton-verde {
+  background-color: #22c55e;
+}
