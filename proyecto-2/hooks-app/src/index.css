@@ -108,3 +108,20 @@
 .boton-verde {
   background-color: #22c55e;
 }
+.h1-effect,
+.h2-effect {
+  color: white;
+}
+.barra-progreso {
+  width: 16rem;
+  height: 0.5rem;
+  background-color: #374151;
+  border-radius: 10px;
+}
+
+.progreso {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}

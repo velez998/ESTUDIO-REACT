@@ -15,6 +15,22 @@ export const TrafficLight = () => {
 
   type TrafficLightColor = "red" | "yellow" | "green";
   // parametros que se le pasa al useState, solo recibe estos colores
+  // si se usara una interface seria unicamente para definir el tipo de dato que recibe red, yellow etc, es decir tipo sting
+  // type es para que reciba especificamente los valores definidos en este caso string que valen red, yellow, green
+
+  // y se usarian asi
+  {
+    /* 
+    export type TrafficLightColor = "red" | "yellow" | "green";
+
+    export interface TrafficLightColors {
+    red: string;
+    yellow: string;
+    green: string;
+    }
+    
+    */
+  }
 
   const handleColorChance = (color: TrafficLightColor) => {
     // color es el parametro que recibe, despues de los : es el tipo de dato o valor que recibe el parametro color
