@@ -5,6 +5,7 @@ const colors = {
   yellow: "bg-yellow-500 animate-pulse",
   green: "bg-green-500 animate-pulse",
 };
+
 type TrafficLightColor = "red" | "yellow" | "green";
 
 const useTrafficLight = () => {
