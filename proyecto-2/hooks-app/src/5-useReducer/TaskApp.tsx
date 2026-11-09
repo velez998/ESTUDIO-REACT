@@ -18,12 +18,12 @@ export const TasksApp = () => {
   const [inputValue, setInputValue] = useState("");
 
   const addTodo = () => {
-    if(inputValue.length ===0) return;
+    if (inputValue.length === 0) return;
 
     const newTodo: Todo = {
-        id: Date.now(),
-        text: inputValue.trim(),
-        completed: false,
+      id: Date.now(),
+      text: inputValue.trim(),
+      completed: false,
     };
   };
 
