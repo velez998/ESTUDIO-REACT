@@ -2,7 +2,7 @@
 // Es necesario componentes de Shadcn/ui
 // https://ui.shadcn.com/docs/installation/vite
 
-import React, { useReducer, useState } from "react";
+import React, { useReducer } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -29,60 +29,18 @@ export const ScrambleWords = () => {
     totalWords,
   } = state;
 
-  //   const [words, setWords] = useState(shuffleArray(GAME_WORDS));
-  //   const [currentWord, setCurrentWord] = useState(words[0]); //palabra a adivinar
-  //   const [scrambledWord, setScrambledWord] = useState(scrambleWord(currentWord)); //almacena las palabras desordenadas
-  //   const [guess, setGuess] = useState(""); //palabra ingresada
-  //   const [points, setPoints] = useState(0); //puntos        //actualiza puntos
-  //   const [errorCounter, setErrorCounter] = useState(0); //cantidad de errores          //actualiza errores
-  //   const [maxAllowErrors, setMaxAllowErrors] = useState(3); //maximos errores permitidos
-
-  //   const [skipCounter, setSkipCounter] = useState(0); //cantidad de skipear palabra
-  //   const [maxSkips, setMaxSkips] = useState(3); //maximo de skipeadas
-
-  //   const [isGameOver, setIsGameOver] = useState(false); //termino el juego
-
   const handleGuessSubmit = (e: React.FormEvent) => {
-    //     // Previene el refresh de la página
     e.preventDefault();
 
     dispatch({
       type: "CHECK_ANSWER",
     });
-    //     // Implementar lógica de juego
-    //     // console.log("Intento de adivinanza:", guess, currentWord);
-    //     if (guess === currentWord) {
-    //       // si la palabra ingresada es igual a la esperada
-    //       const newWords = words.slice(1); // elimina la primera palabra
-    //       setPoints(points + 1); // aumenta en 1 los puntos al acertar
-    //       setGuess(""); // resetea el input
-    //       setWords(newWords); // se actualiza la palabra
-    //       setCurrentWord(newWords[0]); // guarda la posicion de la palabra actual
-    //       setScrambledWord(scrambleWord(newWords[0])); // palabras desordenadas en la posicion actual
-    //       return;
-    //     }
-    //     setErrorCounter(errorCounter + 1); // si falla aumenta la cantidad de errores
-    //     setGuess(""); // resetea el input
-
-    //     if (errorCounter + 1 >= maxAllowErrors) {
-    //       // si los errores son mayor o igual al maximo
-    //       setIsGameOver(true); // se termina el juego
-    //       return; // termina todo
-    //     }
   };
 
   const handleSkip = () => {
     dispatch({
       type: "SKIP_WORD",
     });
-    //     // console.log("Palabra saltada");
-    //     if (skipCounter >= maxSkips) return; // si el numero de skips es mayor o igual al maximo de skips termina
-    //     const updateWords = words.slice(1); // SINO desplaza en 1 la sig palabra
-    //     setSkipCounter(skipCounter + 1); // aumenta en 1 la cantidad de skips
-    //     setWords(updateWords); // actualiza la palabra en 1 como se definio antes
-    //     setCurrentWord(updateWords[0]); // se actualiza la palabra a adivinar
-    //     setScrambledWord(scrambleWord(updateWords[0])); // se actualiza la palabra al azar
-    //     setGuess(""); // se resetea el input
   };
 
   const handlePlayAgain = () => {
@@ -90,16 +48,6 @@ export const ScrambleWords = () => {
       type: "RESET_GAME",
       payload: getInitialState(),
     });
-    //     // console.log("Jugar de nuevo");
-    //     const newArray = shuffleArray(GAME_WORDS); // se resetea el array con las palabras
-    //     setPoints(0); // se resetean los puntos
-    //     setErrorCounter(0); // se resetean los errores
-    //     setGuess(""); // se resetea el input
-    //     setWords(newArray);
-    //     setCurrentWord(newArray[0]); // se resetean las palabras
-    //     setIsGameOver(false); // el juego vuelve a activarse
-    //     setSkipCounter(0); // se resetean los skips
-    //     setScrambledWord(scrambleWord(newArray[0])); // se resetean las palabras al azar
   };
 
   //! Si ya no hay palabras para jugar, se muestra el mensaje de fin de juego

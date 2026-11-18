@@ -67,7 +67,7 @@ export type ScrambleWordsAction =
   | { type: "SET_GUESS"; payload: string }
   | { type: "CHECK_ANSWER" }
   | { type: "SKIP_WORD" }
-  | { type: "RESET_GAME", payload: ScrambleWordsState };
+  | { type: "RESET_GAME"; payload: ScrambleWordsState };
 
 export const scrambleWordsReducer = (
   state: ScrambleWordsState,
@@ -115,20 +115,10 @@ export const scrambleWordsReducer = (
     }
 
     case "RESET_GAME": {
-        return action.payload
+      return action.payload;
     }
 
     default:
       return state;
   }
 };
-
-//     const newArray = shuffleArray(GAME_WORDS); // se resetea el array con las palabras
-//     setPoints(0); // se resetean los puntos
-//     setErrorCounter(0); // se resetean los errores
-//     setGuess(""); // se resetea el input
-//     setWords(newArray);
-//     setCurrentWord(newArray[0]); // se resetean las palabras
-//     setIsGameOver(false); // el juego vuelve a activarse
-//     setSkipCounter(0); // se resetean los skips
-//     setScrambledWord(scrambleWord(newArray[0])); // se resetean las palabras al azar
