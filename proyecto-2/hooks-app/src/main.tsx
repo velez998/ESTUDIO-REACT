@@ -5,10 +5,10 @@ import "./index.css";
 // import { TrafficLightEffect } from "./2-useEffect/TrafficLightEffect";
 // import { TrafficLightEffectHook } from "./2-useEffect/TrafficLightEffectHook";
 // import { PokemonPage } from "./3-examples/PokemonPage";
-import { TasksApp } from "./5-useReducer/TaskApp";
+import { ScrambleWords } from "./5-useReducer/ScrambleWords";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <TasksApp />
+    <ScrambleWords />
   </StrictMode>,
 );
